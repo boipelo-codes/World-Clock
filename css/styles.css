@@ -29,6 +29,7 @@ select{
 h2{
     margin: 0 10px;
     font-size: 28px;
+    text-align: center;
 }
 
 .city{
