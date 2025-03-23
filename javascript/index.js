@@ -1,13 +1,17 @@
 function updateTime() {
-    letjohannesburgElement = document.querySelector("#johannesburg");
+    let johannesburgElement = document.querySelector("#johannesburg");
     if (johannesburgElement) {
         let johannesburgDateElement = johannesburgElement.querySelector(".date");
         let johannesburgTimeElement = johannesburgElement.querySelector(".time");
-        let johannesburgTime = moment().tz ("Africa/Johannesburg");
+        let johannesburgTime = moment().tz("Africa/Johannesburg");
 
-        johannesburgDateElement.innerHTML = johannesburgTime.format("MMMM	Do YYYY");
+        johannesburgDateElement.innerHTML = johannesburgTime.format("MMMM Do YYYY");
         johannesburgTimeElement.innerHTML = johannesburgTime.format(
-          "h:mm:ss [<small>]A[</small>]"
+            "h:mm:ss [<small>]A[</small>]"
         );
-      }
     }
+}
+
+updateTime();
+
+setInterval(updateTime, 1000);
