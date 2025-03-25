@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-    <scipt src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>World Clock-Boipelo</title>
 </head>
@@ -12,31 +12,32 @@
     <h1>World Clock</h1>
     <div class="container">
 
-    <select>
+    <select id="city">
         <option value="">Select a city...</option>
-        <option value="Africa/Johannesburg">Johannesbrug</option>
+        <option value="Africa/Johannesburg">Johannesburg</option>
         <option value="Asia/Tokyo">Tokyo</option>
         <option value="Asia/Almaty">Astana</option>
     </select>
 
     <div class="city" id="johannesburg">
         <h2>Johannesburg</h2>
+        <div class="date"></div>
+        <div class="time"></div>
     </div>
-    <div class="date">August 15th 2025</div>
-    <div class="time">1:48:23 <small>AM</small> </div>
+    
 
     <div class="city" id="tokyo">
         <h2>Tokyo</h2>
+        <div class="date"></div>
+        <div class="time"></div>
     </div>
-    <div class="date">August 15th 2025</div>
-    <div class="time">1:48:23 <small>AM</small> </div>
-
+    
     <div class="city" id="astana">
         <h2>Astana</h2>
+        <div class="date"></div>
+        <div class="time"></div>
     </div>
-    <div class="date">August 15th 2025</div>
-    <div class="time">1:48:23 <small>AM</small> </div>
-
+    
     </div>
 
     <footer>
