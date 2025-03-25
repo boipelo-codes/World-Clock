@@ -74,10 +74,8 @@ if (citieSSelectElement) {
             let formattedLocalTime = localTime.format("MMMM Do YYYY, h:mm:ss A");
 
             
-            alert(
-                `The current time in ${this.options[this.selectedIndex].text} is ${formattedCityTime}.\nYour local time is ${formattedLocalTime}.`
-            );
-            
+                alert(`The current time in ${this.options[this.selectedIndex].text} is ${formattedTime}`);
+
             updateCityTime(selectedTimeZone);
         }
     });
