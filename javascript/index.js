@@ -35,6 +35,7 @@ function updateTime() {
             "h:mm:ss [<small>]A[</small>]"
         );
     }
+
     function updateTime() {
         let cities = [
             { id: "johannesburg", timezone: "Africa/Johannesburg" },
@@ -55,6 +56,24 @@ function updateTime() {
         });
     }
     
+    let citieSSelectElement = document.querySelector("#city");
+
+if (citieSSelectElement) {
+    citieSSelectElement.addEventListener("change", function () {
+        let selectedTimeZone = this.value;
+
+        if (selectedTimeZone) {
+            let cityTime = moment().tz(selectedTimeZone);
+            let formattedTime = cityTime.format("MMMM Do YYYY, h:mm:ss A");
+
+            
+            alert(`The current time in ${this.options[this.selectedIndex].text} is ${formattedTime}`);
+
+            updateCityTime(selectedTimeZone);
+        }
+    });
+}
+
     setInterval(updateTime, 1000);
     updateTime();
     
